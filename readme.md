@@ -38,8 +38,8 @@ adb reboot
 
 ### Copying required files
 
-The SuperSU Update archive has to be unzipped on the reader's computer and both its content and the custom install script have to be sent to the device.
-
+The content of the SuperSU Update archive has to be unzipped into a folder on the reader's computer.
+Both this folder (named `UPDATE-SuperSU-v2.46` here) and the custom install script have then to be sent to the device.
 
 ```bash
 adb root
