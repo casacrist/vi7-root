@@ -62,13 +62,7 @@ Running the custom installation script will:
 adb shell /system/bin/sh -x -e /data/local/tmp/root-vi7.sh
 ```
 
-### Installing the GUI
-
-The SuperSU APK is provided in the SuperSU Update archive and should be installed using ADB. A confirmation dialog may appear on the device.
-
-```bash
-adb install UPDATE-SuperSU-v2.46/common/Superuser.apk
-```
+### Installing a root checking app
 
 Optionnally, the reader may want to install a root checking app like [Root Checker](https://www.apkmirror.com/apk/joeykrim/root-checker-basic/root-checker-basic-5-5-3-android-apk-download/)
 
