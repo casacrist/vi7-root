@@ -1,4 +1,4 @@
-#!/system/bin/sh -x
+#!/system/bin/sh -x -e
 
 # Chuwi Vi7 SuperSU install script <https://github.com/Pacien/vi7-root>
 # Tailored for the stock Chuwi firmware
