@@ -59,7 +59,7 @@ Running the custom installation script will:
 
 
 ```bash
-adb shell /system/bin/sh -x /data/local/tmp/root-vi7.sh
+adb shell /system/bin/sh -x -e /data/local/tmp/root-vi7.sh
 ```
 
 ### Installing the GUI
