@@ -26,17 +26,12 @@ cp_chmod_chcon() {
 	chcon $4 $2
 }
 
-bckp() {
-	cp -p $1 $1.bckp
-}
-
 mkdir -p /system/app/SuperSU
 cp_chmod_chcon $SU_DIR/common/Superuser.apk /system/app/SuperSU/SuperSU.apk 0644 u:object_r:system_file:s0
 
 cp_chmod_chcon $SU_DIR/common/install-recovery.sh /system/etc/install-recovery.sh 0755 u:object_r:toolbox_exec:s0
 
-bckp /system/bin/install-recovery.sh
-rm /system/bin/install-recovery.sh
+mv /system/bin/install-recovery.sh /system/bin/install-recovery-2.sh
 ln -s /system/etc/install-recovery.sh /system/bin/install-recovery.sh
 
 mkdir -p /system/bin/.ext
