@@ -61,3 +61,7 @@ touch /system/etc/.installed_su_daemon
 rm -R /data/local/tmp/*
 #mount -o ro,remount /system  # done on reboot
 /system/xbin/su --install
+
+# if we have reached this line (-e), everything is OK
+echo "OK"
+
