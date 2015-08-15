@@ -15,7 +15,11 @@
 # TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-mount -o rw,remount /system
+# we check system is readonly and if so attempt to mount it readwrite
+mount |grep system |grep -c ro && mount -o rw,remount /system
+
+#verify it is now readwrite
+mount |grep system |grep -c ro && exit
 
 SU_DIR=/data/local/tmp
 ARCH=x86
@@ -63,5 +67,5 @@ rm -R /data/local/tmp/*
 /system/xbin/su --install
 
 # if we have reached this line (-e), everything is OK
-echo "OK"
+echo "OK, please now reboot"
 
